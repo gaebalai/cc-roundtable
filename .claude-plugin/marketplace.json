@@ -1,0 +1,32 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "gaebalai-marketplace",
+  "version": "0.1.2",
+  "description": "Claude Code 생산성 플러그인 모음 — by gaebalai",
+  "owner": {
+    "name": "Jaewoo Kim",
+    "email": "jaewoo@mdrules.dev",
+    "url": "https://github.com/gaebalai"
+  },
+  "plugins": [
+    {
+      "name": "cc-roundtable",
+      "description": "다분야 전문가를 동적으로 선정해 구조화된 토론으로 다각적 평가·제언을 정리합니다.",
+      "version": "1.0.0",
+      "source": "./plugins/cc-roundtable",
+      "category": "productivity",
+      "tags": [
+        "roundtable",
+        "원탁회의",
+        "korean",
+        "multi-agent",
+        "expert-panel",
+        "debate",
+        "review",
+        "decision-making",
+        "devils-advocate",
+        "critical-thinking"
+      ]
+    }
+  ]
+}

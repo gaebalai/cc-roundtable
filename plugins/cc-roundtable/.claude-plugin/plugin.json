@@ -1,0 +1,11 @@
+{
+  "name": "cc-roundtable",
+  "description": "다분야 전문가를 동적으로 선정해 구조화된 토론으로 다각적 평가·제언을 정리합니다.",
+  "version": "1.0.0",
+  "author": {
+    "name": "gaebalai",
+    "url": "https://github.com/gaebalai"
+  },
+  "license": "MIT",
+  "skills": "./skills/"
+}
