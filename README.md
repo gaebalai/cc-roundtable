@@ -4,6 +4,22 @@
 
 ---
 
+> ⚠️ **이 저장소는 더 이상 마켓플레이스가 아닙니다 (since 2026-04-26).**
+>
+> `cc-roundtable` 플러그인은 통합 마켓플레이스 **[`gaebalai/gaebalai-marketplace`](https://github.com/gaebalai/gaebalai-marketplace)** 로 이전되었습니다.
+>
+> 기존에 이 저장소를 마켓플레이스로 등록하셨다면 다음으로 마이그레이션해 주세요.
+>
+> ```
+> /plugin marketplace remove gaebalai-marketplace
+> /plugin marketplace add gaebalai/gaebalai-marketplace
+> /plugin install cc-roundtable@gaebalai-marketplace
+> ```
+>
+> 본 저장소는 cc-roundtable 플러그인의 소스 백업·이슈 트래커로 계속 보존됩니다.
+
+---
+
 ## 왜 Roundtable인가?
 
 AI에게 "여러 전문가가 되어 토론해줘"라고 하면, 대체로 다음과 같은 일이 일어납니다.
@@ -25,53 +41,32 @@ Roundtable은 이 문제를 **구조**로 풉니다.
 
 ## 설치
 
-### 방법 1: GitHub 마켓플레이스에서 설치 (권장)
+본 플러그인은 [**gaebalai/gaebalai-marketplace**](https://github.com/gaebalai/gaebalai-marketplace) 통합 마켓플레이스에서 배포됩니다. Claude Code 세션에서.
 
-Claude Code 세션에서 아래 두 줄을 차례로 실행합니다.
-
-```bash
-# 1) 이 저장소를 마켓플레이스로 등록
-/plugin marketplace add gaebalai/cc-roundtable
-
-# 2) 플러그인 설치
-/plugin install cc-roundtable@gaebalai-marketplace
 ```
-
-> `gaebalai-marketplace`는 [`.claude-plugin/marketplace.json`](.claude-plugin/marketplace.json)에 정의된 마켓플레이스 이름이고, `cc-roundtable`은 그 안에 등록된 플러그인 이름입니다.
-
-### 방법 2: 로컬 경로로 설치 (직접 클론한 경우)
-
-저장소를 이미 로컬에 받아둔 상태라면 로컬 경로를 마켓플레이스로 지정할 수 있습니다.
-
-```bash
-# 저장소 클론
-git clone https://github.com/gaebalai/cc-roundtable.git
-
-# Claude Code 세션에서
-/plugin marketplace add /절대/경로/cc-roundtable
+/plugin marketplace add gaebalai/gaebalai-marketplace
 /plugin install cc-roundtable@gaebalai-marketplace
-```
-
-### 방법 3: 수동 복사 (최소 구성)
-
-플러그인 관리 명령을 쓰지 않고 직접 배치하고 싶은 경우:
-
-```bash
-# 전역: 모든 프로젝트에서 사용
-mkdir -p ~/.claude/plugins
-cp -r cc-roundtable ~/.claude/plugins/
-
-# 또는 프로젝트 로컬: 해당 프로젝트에서만 사용
-mkdir -p .claude/plugins
-cp -r cc-roundtable .claude/plugins/
 ```
 
 ### 업데이트 / 제거
 
-```bash
-/plugin update cc-roundtable@gaebalai-marketplace
+```
+/plugin marketplace update gaebalai-marketplace
 /plugin uninstall cc-roundtable@gaebalai-marketplace
 ```
+
+### 로컬 경로 설치
+
+직접 클론해서 시험하려면.
+
+```bash
+git clone https://github.com/gaebalai/gaebalai-marketplace.git
+# Claude Code 세션에서
+/plugin marketplace add /절대/경로/gaebalai-marketplace
+/plugin install cc-roundtable@gaebalai-marketplace
+```
+
+자세한 마켓플레이스 정보·다른 수록 플러그인은 [gaebalai-marketplace README](https://github.com/gaebalai/gaebalai-marketplace#readme)를 참고하세요.
 
 ---
 
